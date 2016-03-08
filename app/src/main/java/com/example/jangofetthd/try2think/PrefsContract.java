@@ -15,4 +15,5 @@ public class PrefsContract {
 	public static final String db1_name = "db1";
 	public static final String db1_ch1 = "ch1";
 	public static final String db1_ch2 = "ch2";
+	public static final String db1_ch3 = "ch3";
 }

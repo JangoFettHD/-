@@ -1,5 +1,6 @@
 package com.example.jangofetthd.try2think;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
@@ -30,7 +31,9 @@ public class db {
         temp_1="";
         k = 0;
     }
-    private static SharedPreferences P_Main_settings;
+
+    private static Context hostActivity;
+    public static SharedPreferences P_Main_settings;
 
     public static void savech(int chapter){
         SharedPreferences.Editor editor = P_Main_settings.edit();
@@ -38,76 +41,79 @@ public class db {
         switch (chapter){
             case 0: editor.putString(PrefsContract.db1_ch1, temp_1); break;
             case 1: editor.putString(PrefsContract.db1_ch2, temp_1); break;
+            case 2: editor.putString(PrefsContract.db1_ch3, temp_1); break;
         }
+        editor.apply();
     }
 
     public static void loadch(int chapter){
         switch (chapter){
             case 0: if (P_Main_settings.contains(PrefsContract.db1_ch1)) temp_1=P_Main_settings.getString(PrefsContract.db1_ch1,""); break;
             case 1: if (P_Main_settings.contains(PrefsContract.db1_ch2)) temp_1=P_Main_settings.getString(PrefsContract.db1_ch2,""); break;
+            case 2: if (P_Main_settings.contains(PrefsContract.db1_ch3)) temp_1=P_Main_settings.getString(PrefsContract.db1_ch3,""); break;
         }
         strtoch(chapter);
     }
 
     static DataBase sections[] = new DataBase[]{
             new DataBase("First Test", 0, 0, new lvl[]{
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //1
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //2
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //3
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //4
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //5
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //6
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //7
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //8
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //9
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //10
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //11
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //12
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //13
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //14
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //15
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //16
+                    new lvl("http://jangofetthd.me/rebus/mikhail1-min.png", "Михаил", 0, 0, 0, "На второй картинке - байк", 0), //1
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //2
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //3
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //4
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //5
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //6
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //7
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //8
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //9
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //10
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //11
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //12
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //13
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //14
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //15
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //16
             }),
-            new DataBase("Second Test", 0, 0, new lvl[]{
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //1
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //2
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //3
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //4
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //5
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //6
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //7
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //8
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //9
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //10
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //11
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //12
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //13
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //14
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //15
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //16
+            new DataBase("Second Test", 50, 200, new lvl[]{
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //1
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //2
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //3
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //4
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //5
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //6
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //7
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //8
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //9
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //10
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //11
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //12
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //13
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //14
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //15
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //16
             }),
             new DataBase("3 Test", 0, 0, new lvl[]{
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //1
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //2
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //3
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //4
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //5
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //6
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //7
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //8
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //9
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //10
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //11
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //12
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //13
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //14
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //15
-                    new lvl(00, "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //16
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //1
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //2
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //3
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //4
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //5
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //6
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //7
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //8
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //9
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //10
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //11
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //12
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //13
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //14
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //15
+                    new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //16
             })
     };
 
     public static class lvl {
-        public int image;
+        public String image;
         public String answer;
         public int status;
         public int tryCount;
@@ -115,7 +121,7 @@ public class db {
         public int lock;
         public String help;
 
-        lvl(int image, String answer, int tryCount, int helpCount, int lock, String help, int status) {
+        lvl(String image, String answer, int tryCount, int helpCount, int lock, String help, int status) {
             this.image = image;
             this.answer = answer;
             this.tryCount = tryCount;

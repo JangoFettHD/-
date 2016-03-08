@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jangofetthd.try2think.GameProcess">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="й"
+                android:id="@+id/й"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ц"
+                android:id="@+id/ц"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="у"
+                android:id="@+id/у"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="к"
+                android:id="@+id/к"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="е"
+                android:id="@+id/е"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="н"
+                android:id="@+id/н"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="г"
+                android:id="@+id/г"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ш"
+                android:id="@+id/ш"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="щ"
+                android:id="@+id/щ"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="з"
+                android:id="@+id/з"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="х"
+                android:id="@+id/х"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#3252c6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ф"
+                android:id="@+id/ф"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ы"
+                android:id="@+id/ы"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="в"
+                android:id="@+id/в"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="а"
+                android:id="@+id/а"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="п"
+                android:id="@+id/п"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="р"
+                android:id="@+id/р"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="о"
+                android:id="@+id/о"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="л"
+                android:id="@+id/л"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="д"
+                android:id="@+id/д"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ж"
+                android:id="@+id/ж"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="э"
+                android:id="@+id/э"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:textColor="#FF3252C6"
+                android:background="#ffffff" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt;"
+                android:id="@+id/backspace"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="я"
+                android:id="@+id/я"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ч"
+                android:id="@+id/ч"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="с"
+                android:id="@+id/с"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="м"
+                android:id="@+id/м"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="и"
+                android:id="@+id/и"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="т"
+                android:id="@+id/т"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ь"
+                android:id="@+id/ь"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="б"
+                android:id="@+id/б"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ю"
+                android:id="@+id/ю"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:id="@+id/enter"
+                android:layout_weight="1"
+                android:onClick="onKeyboard"
+                android:background="#ffffff"
+                android:textColor="#FF3252C6" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="input"
+        android:id="@+id/input"
+        android:layout_above="@+id/tableLayout"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/input" />
+</RelativeLayout>
