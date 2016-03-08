@@ -56,7 +56,7 @@ public class db {
     }
 
     static DataBase sections[] = new DataBase[]{
-            new DataBase("First Test", 0, 0, new lvl[]{
+            new DataBase("First Test", 0, 0, 0, new lvl[]{
                     new lvl("http://jangofetthd.me/rebus/mikhail1-min.png", "Михаил", 0, 0, 0, "На второй картинке - байк", 0), //1
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //2
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //3
@@ -74,7 +74,7 @@ public class db {
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //15
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //16
             }),
-            new DataBase("Second Test", 50, 200, new lvl[]{
+            new DataBase("Second Test", 50, 200, 0, new lvl[]{
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //1
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //2
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //3
@@ -92,7 +92,7 @@ public class db {
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //15
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //16
             }),
-            new DataBase("3 Test", 0, 0, new lvl[]{
+            new DataBase("3 Test", 0, 0, 0, new lvl[]{
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //1
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //2
                     new lvl("https://pp.vk.me/c6075/v6075541/164e5/S5g5CMClqRc.jpg", "Подумай", 0, 0, 0, "На второй картинке - байк", 0), //3
@@ -135,12 +135,14 @@ public class db {
         public String name;
         public int price;
         public int lvls;
+        public int status;
         public lvl section[];
 
-        DataBase(String name, int price, int lvls, lvl section[]) {
+        DataBase(String name, int price, int lvls, int status, lvl section[]) {
             this.name = name;
             this.price = price;
             this.lvls = lvls;
+            this.status = status;
             this.section = section;
         }
     }

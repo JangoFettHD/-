@@ -15,6 +15,8 @@ import java.util.HashMap;
 
 public class Sections extends AppCompatActivity {
 
+    static Context context;
+
     HashMap<String, String> section = new HashMap<String, String>();
     ArrayList<HashMap<String, String>> playlist =
             new ArrayList<HashMap<String, String>>();
@@ -27,6 +29,7 @@ public class Sections extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.listView);
         db.P_Main_settings=getSharedPreferences(PrefsContract.db1_name, Context.MODE_PRIVATE);
 
+        context=this;
 
         for (int i = 0; i < db.sections.length; i++) {
             section.put("name", db.sections[i].name);
@@ -48,6 +51,9 @@ public class Sections extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
                 v.section=position;
+                if (!webhelper.checkSectionFiles(v.section)){
+                    webhelper.download(v.section);
+                }
                 Log.i("SuperLog", "v.section "+v.section);
                 startActivity(go_train);
             }

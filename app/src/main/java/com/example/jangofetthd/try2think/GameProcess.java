@@ -1,17 +1,11 @@
 package com.example.jangofetthd.try2think;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.io.InputStream;
 
 public class GameProcess extends AppCompatActivity {
     public String input="";
@@ -25,12 +19,12 @@ public class GameProcess extends AppCompatActivity {
 
         imageView = (ImageView)findViewById(R.id.imageView);
         in = (TextView)findViewById(R.id.input);
+        imageView.setImageDrawable(webhelper.getImage(v.section,v.level));
+
+        /*
         new DownloadImageTask((ImageView) findViewById(R.id.imageView))
-                .execute(db.sections[v.section].section[v.level].image);
+                .execute(db.sections[v.section].section[v.level].image);*/
     }
-
-
-
 
     public void onKeyboard(View view) {
         switch (view.getId()){
@@ -83,7 +77,7 @@ public class GameProcess extends AppCompatActivity {
     }
 
 
-    private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+    /*private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;
 
         public DownloadImageTask(ImageView bmImage) {
@@ -106,5 +100,5 @@ public class GameProcess extends AppCompatActivity {
         protected void onPostExecute(Bitmap result) {
             bmImage.setImageBitmap(result);
         }
-    }
+    }*/
 }
